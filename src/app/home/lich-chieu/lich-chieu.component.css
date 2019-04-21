@@ -1,0 +1,173 @@
+.heading{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top: 30px;
+    margin-top: 108px;
+}
+
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.wrap-lich-chieu{
+    padding: 0 0 50px 0;
+}
+.week-day {
+    padding-bottom: 4rem;
+}
+
+.btn{
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 5px;
+}
+.omb-secondary {
+    background-color:  #282828;
+    border: 2px solid  #282828;
+    color: #fff;
+}
+.omb-secondary:hover {
+    color:  #282828;
+    background-color: transparent;
+    border: 2px solid  #282828;
+    transition: .4s;
+}
+.omb-primary{
+    background:rgb(254, 132, 49);
+    border: 2px solid  rgb(254, 132, 49);
+    color: #fff;
+}
+.omb-primary:hover{
+    color:  rgb(254, 132, 49);
+    background-color: transparent;
+    border: 2px solid  rgb(254, 132, 49);
+    transition: .4s;
+}
+
+.movies-schedule-list > div:nth-of-type(1) {
+    width: 43%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #282828;
+}
+.movies-schedule-list > div:nth-of-type(2) {
+    width: 57%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #282828;
+}
+.movies-schedule-list > div.row {
+    display: table-row;
+}
+.movies-schedule-list > div.row > div:nth-of-type(1n) {
+    display: table-cell;
+    border-left: solid 0.0625rem #ddd;
+}
+.movies-schedule-list> div.row > div:nth-of-type(1n) {
+    width: 100px;
+}
+.movies-schedule-list > div.row > div:nth-of-type(2n) {
+    width: 200px;
+}
+.movies-schedule-list > div.row > div:nth-of-type(3n) {
+    width: 668px;
+    border-right: solid 0.0625rem #ddd;
+}
+.theater-icon,
+.list-cinemas,
+.cinema-schedule{
+    border-bottom: solid 0.0625rem #ddd;
+}
+.movie-stats>.li-theater {
+    list-style: none;
+    padding: 15px 0 15px 25px;
+}
+img{
+    width: 50px; 
+}
+.movie-stats li.active a img {
+    opacity: 1;
+}
+.movie-stats li a img{
+    opacity: .5;
+    cursor: pointer;
+}
+.movie-stats li a:hover img{
+    opacity: 1;
+    
+}
+.list-cinemas,
+.cinema-schedule{
+    padding: 0 20px;
+}
+.cinema{
+    font-size: 13px;
+    margin-bottom: 50px;
+    opacity: .5;
+}
+.cinema:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.cinema span {
+    display: block;
+    line-height: 1.4;
+}
+.cinema-image{
+    float:left;
+    margin-right: 10px;
+    clear: both;
+}
+.infoMovieCinema{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.movieInfo{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.ageType{
+    padding: 5px 8px;
+    font-size: 14px;
+    margin-right: 6px;
+}
+.movieTitle{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.listTypeTime img {
+    float: left;
+    margin-right: 35px;
+    margin-top: 7px;
+    width: 30px;
+    height: 26px;
+    clear:both;
+}
+.sessions a{
+    background-color: rgb(254, 132, 49);
+    padding: 5px 10px;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-decoration: none;
+}
+

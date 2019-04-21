@@ -1,0 +1,38 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="heading">Đặt Ghế Online</h2>
+            <hr>
+        </div>
+        <div class="col-8 m-auto p-4 text-center">
+            <div class="man-hinh">SCREEN</div>
+            <app-ghe *ngFor="let ghe of danhSachGhe" [ItemGhe]="ghe" (emitDatGhe)="datGheParent($event)"></app-ghe>
+            <hr>
+            <div class="row datghe" *ngFor="let gheDat of danhSachGheDaDat">
+                <div class="col-6">
+                    <p>
+                        <span>Tên Ghế: {{gheDat.TenGhe}}</span>
+                        <br />
+                        <span>Giá: {{gheDat.GiaVe}}</span>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-huydat" (click)="huyGhe(gheDat.MaGhe, gheDat.GiaVe)">Hủy đặt</button>
+                </div>
+            </div>
+
+            <hr>
+            <p>Số ghế đã đặt: {{soGheDaDat}}</p>
+            <p>Số ghế còn lại: {{soGheConLai}} </p>
+        </div>
+
+        <div class="tong-tien col-12">
+            <p>
+                Tổng tiền: {{totalAmount | number}}đ
+            </p>
+        </div>
+        <div class="contact col-12">
+            <p class="note">Xin lưu ý, bạn không thể hủy hoặc thay đổi suất chiếu cho vé đã mua.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="img__logo" src="../../../assets/img/logo.png" />
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/lichchieu">Lịch Chiếu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/tintuc">Tin Tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lienhe">Liên Hệ</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap text-white" *ngIf="!statusDN; else showAccount">
+                <li class="nav-item-item active">
+                    <a class="nav-link" routerLink="/dangky">Đăng Ký</a>
+                </li>
+                <li class="line-between"> </li>
+                <li class="nav-item-item active">
+                    <a class="nav-link" routerLink="/dangnhap">Đăng Nhập</a>
+                </li>
+            </ul>
+            <ng-template #showAccount>
+                <img class="img-account" src="../../../assets/img/index-12.png">
+                <span class="text-account">Xin chào! {{user.HoTen}}</span>
+                <button type="button" class="btn btn-logout" (click)="logOut()">Log out</button>
+        </ng-template>
+        </div>
+    </div>
+</nav>

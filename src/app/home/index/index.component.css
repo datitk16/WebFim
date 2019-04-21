@@ -1,0 +1,14 @@
+.heading{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top: 50px;
+}
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,37 @@
+.bg-dangnhap{
+    width: 100%;  
+    background-image: url('../../../assets/img/bg_login.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container-dangnhap{
+    width: 100%;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(19, 21, 31, 0.5);
+    padding: 70px;
+    
+}
+.wrap-dangnhap{
+    width: 680px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 40px 0 50px 0;
+    margin-top: 67px;
+}
+.btn{
+    background-color:  rgb(254, 132, 49);
+    border: 2px solid  rgb(254, 132, 49);
+    color: #fff;
+    text-transform: uppercase;
+}
+.btn:hover{
+    color:  rgb(254, 132, 49);
+    background-color: transparent;
+    border: 2px solid  rgb(254, 132, 49);
+    transition: .4s;
+}

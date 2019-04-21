@@ -1,0 +1,114 @@
+<div class="content-table">
+  <div class="container">
+    <div class="row">
+      <!--begin tìm kiếm người dùng-->
+      <div class="col-md-12">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Tìm kiếm tài khoản..." [(ngModel)]="searchTerm">
+        </div>
+      </div>
+      <!--end tìm kiếm người dùng-->
+
+      <!--button thêm người dùng-->
+      <div class="col-md-12">
+        <button class="btn btnThemNguoiDung mt-2" (click)="setTitle('Thêm Người Dùng')" data-toggle="modal" data-target="#myModal">
+          Thêm người dùng
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+      <!--end button-->
+
+      <!--hiển thị thông tin người dùng-->
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header-card text-center">
+            <h4 class="title">THÔNG TIN NGƯỜI DÙNG</h4>
+          </div>
+          <div class="table-content table-responsive">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>TÀI KHOẢN</th>
+                  <th>MẬT KHẨU</th>
+                  <th>HỌ TÊN</th>
+                  <th>EMAIL</th>
+                  <th>SỐ ĐT</th>
+                  <th>MÃ NHÓM</th>
+                  <th>THAO TÁC</th>
+                </tr>
+              </thead>
+              <tbody #tblUser>
+                <tr *ngFor="let nguoidung of danhSachNguoiDung | searchingFilter: searchTerm, let i = index">
+                  <td>{{i +1}}</td>
+                  <td>{{nguoidung.TaiKhoan}}</td>
+                  <td>{{nguoidung.MatKhau}}</td>
+                  <td>{{nguoidung.HoTen}}</td>
+                  <td>{{nguoidung.Email}}</td>
+                  <td>{{nguoidung.SoDT}}</td>
+                  <td>{{nguoidung.MaNhom}}</td>
+                  <td>
+                    <button #btnCapNhat class="btn btnCapNhat" data-toggle="modal" data-target="#myModal"
+                      [attr.data-taikhoan]="nguoidung.TaiKhoan" [attr.data-matkhau]="nguoidung.MatKhau"
+                      [attr.data-hoten]="nguoidung.HoTen" [attr.data-email]="nguoidung.Email" [attr.data-sodt]="nguoidung.SoDT"
+                      [attr.data-manhom]="nguoidung.MaNhom" (click)="capNhat(btnCapNhat)">
+                      Cập Nhật</button>
+                    <button class="btn btnXoa mt-2" (click)="xoaNguoiDung(nguoidung.TaiKhoan)">Xóa</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--end thông tin người dùng-->
+    </div>
+  </div>
+</div>
+
+<!-- modal nguoi dung-->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{title}}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <form #formThemND="ngForm">
+          <div class="form-group">
+            <label>Tài khoản</label>
+            <input #taiKhoan="ngModel" ngModel name="TaiKhoan" type="text" class="form-control" placeholder="Nhập vào tài khoản">
+          </div>
+
+          <div class="form-group">
+            <label>Mật khẩu</label>
+            <input #matKhau="ngModel" ngModel name="MatKhau" type="text" class="form-control" placeholder="Nhập vào mật khẩu">
+          </div>
+
+          <div class="form-group">
+            <label>Họ tên</label>
+            <input #hoTen="ngModel" ngModel name="HoTen" type="text" class="form-control" placeholder="Nhập vào họ tên">
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input #email="ngModel" ngModel name="Email" type="email" class="form-control" placeholder="Nhập vào Email">
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại</label>
+            <input #soDT="ngModel" ngModel name="SoDT" type="text" class="form-control" placeholder="Nhập vào số điện thoại">
+          </div>
+
+          <div class="form-group">
+            <label>Mã nhóm</label>
+            <input #maNhom="ngModel" ngModel name="MaNhom" type="text" class="form-control" placeholder="Nhập vào mã nhóm">
+          </div>
+          <button class="btn btnSubmit" type="submit" (click)="submitForm(formThemND)" data-dismiss="modal">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end modal -->

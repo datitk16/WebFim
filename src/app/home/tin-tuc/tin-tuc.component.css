@@ -1,0 +1,82 @@
+.heading{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top:50px;
+}
+
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.thumbnail-1 {
+    padding: 0;
+}
+.thumbnail-mod-2 {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.thumbnail-1 .caption {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+.blog-post-title {
+    padding-bottom: 10px;
+}
+.text-success-custom a {
+    color: #151515;
+    font-size: 20px;
+    font-weight: bold;
+}
+.text-success-custom a:hover {
+    color: rgb(254, 132, 49);
+    transition: .3s all ease;
+}
+a {
+    text-decoration: none;
+}
+.blog-post-time {
+    font-size: 14px;
+    color: #b7b7b7;
+}
+.blog-post-body {
+    margin-top: 10px;
+}
+.blog-post-body p {
+    font-size: 14px;
+    margin: 0 0 6px;
+}
+.comment {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(254, 132, 49);
+    margin-bottom: 10px;
+}
+.comment i{
+    color: #b7b7b7;
+}
+.btn{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+    color:  rgb(254, 132, 49);
+    background-color: transparent;
+    border: 2px solid  #fe8431;
+    transition: .4s;
+    margin-bottom: 50px;
+}
+.btn:hover {
+    background-color:  rgb(254, 132, 49);
+    border-color:  rgb(254, 132, 49);
+    color: #fff;
+}

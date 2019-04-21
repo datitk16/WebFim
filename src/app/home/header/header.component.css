@@ -1,0 +1,50 @@
+.navbar{
+    background-color: #707070;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    z-index: 99;
+    transition: all 0.2s ease 0s;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.nav-item{
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.nav-item-item{
+    margin-right: 10px;
+}
+.navbar-nav>li>a{
+    color: white;
+}
+.navbar-nav>li>a:hover{
+    color: #ddd;
+}
+.img__logo{
+    width:120px;
+}
+
+.line-between{
+    height: 25px;
+    margin-top: 8px;
+   color: white;
+   border-left: 1px solid;
+}
+.btn-logout{
+    background-color:  rgb(254, 132, 49);
+    border: 2px solid  rgb(254, 132, 49);
+    color: #fff;
+    margin: 0 0 0 10px;
+}
+.btn-logout:hover{
+    background-color: transparent;
+    border: 2px solid  rgb(254, 132, 49);
+    transition: .4s;
+}
+.img-account{
+    width:40px;
+    margin: 0 10px 0 0;
+}
+.text-account{
+    color:white;
+    font-size: 14px;
+}

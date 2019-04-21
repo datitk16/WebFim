@@ -1,0 +1,99 @@
+<section class="elementor-element">
+  <h2>Liên Hệ</h2>
+  <hr>
+  <div class="image"></div>
+  <div class="container">
+    <div class="row justify-content-center mt-30-reverse">
+      <div class="col-lg-4 col-md-6 col-sm-6 mt-30">
+        <div class="contact-block text-center">
+          <span class="contact-icon">
+              <img src="../../../assets/img/address_icon-01.png" alt="">
+          </span>
+          <h5>Địa Chỉ</h5>
+          <p>7 Roanoke Rd, North York, Ontario, Canada</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mt-30">
+        <div class="contact-block text-center">
+          <span class="contact-icon">
+            <img src="../../../assets/img/phone_icon-01.png" alt="">
+          </span>
+          <h5>Điện Thoại</h5>
+          <p>+84 12345678</p>
+          <p>+84 87456321</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mt-30">
+        <div class="contact-block text-center">
+          <span class="contact-icon">
+            <img src="../../../assets/img/mail_icon-01.png" alt="">
+          </span>
+          <h5>Mail</h5>
+          <p>Email: info@example.com</p>
+          <p>Skype: example.name</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--form-->
+<section>
+  <div class="bg-dangnhap">
+    <div class="container-dangnhap">
+      <div class="wrap-dangnhap">
+        <h3 class="form-title text-center">Liên hệ chúng tôi</h3>
+        <form #formDN="ngForm" (ngSubmit)="dangNhap(formDN)">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input #taiKhoan="ngModel" matInput name="ho" ngModel placeholder="Họ" type="text" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input #taiKhoan="ngModel" matInput name="ten" ngModel placeholder="Tên" type="text" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input matInput name="email" ngModel placeholder="Email" type="email" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input matInput name="subject" ngModel placeholder="Chủ đề" type="text" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <mat-form-field class="w-100" appearance="outline">
+                  <textarea matInput placeholder="Nội dung"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button class="btn" type="submit">GỬI</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13181.747508845483!2d106.68916711073678!3d10.814604110972695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ea356f051d%3A0x61ab0354265fdfe3!2zMTkwIFBoYW4gVsSDbiBUcuG7iywgUGjGsOG7nW5nIDExLCBCw6xuaCBUaOG6oW5oLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1546748021391" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      
+    </div>
+  
+  
+</section>

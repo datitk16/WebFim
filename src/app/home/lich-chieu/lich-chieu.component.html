@@ -1,0 +1,125 @@
+<section>
+  <div class="container">
+    <h2 class="heading">Lịch Chiếu</h2>
+    <hr>
+    <div class="wrap-lich-chieu">
+      <nav class="week-day">
+        <a href="" class="btn omb-secondary">January 17, 2019</a>
+        <a href="" class="btn omb-primary">January 18, 2019</a>
+        <a href="" class="btn omb-primary">January 19, 2019</a>
+        <a href="" class="btn omb-primary">January 20, 2019</a>
+        <a href="" class="btn omb-primary">January 21, 2019</a>
+        <a href="" class="btn omb-primary">January 22, 2019</a>
+      </nav>
+      <div class="movies-schedule-list">
+        <div>Rạp chiếu</div>
+        <div>Thời gian</div>
+        <div class="row">
+          <!--cột 1-->
+          <div class="theater-icon">
+            <ul class="nav movie-stats">
+              <li class="li-theater active">
+                <a>
+                  <img src="../../../assets/img/galaxy_cinema.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/CGV.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/bhd_cinema.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/DDC.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/CNS.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/Megastar.png" alt="cinema">
+                </a>
+              </li>
+              <li class="li-theater">
+                <a>
+                  <img src="../../../assets/img/cinebox.png" alt="cinema">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--End cột 1-->
+
+          <!--cột 2-->
+          <div class="list-cinemas">
+            <div class="cinema">
+              <img class="cinema-image" src="../../../assets/img/galaxy-nguyen-du.jpg" alt="cinema">
+              <div class="wrapInfo">
+                <span>GLX-Nguyễn Du</span>
+                <span class="infoMovieCinema">116 Nguyễn Du, Q.1</span>
+                <span>
+                  <a href="">[chi tiết]</a>
+                </span>
+              </div>
+            </div>
+            <div class="cinema">
+              <img class="cinema-image" src="../../../assets/img/galaxy-nguyen-du.jpg" alt="cinema">
+              <div class="wrapInfo">
+                <span>GLX-Quang Trung</span>
+                <span class="infoMovieCinema">L3-Co.opmart Foodcosa, 304A Quang Trung, Gò Vấp</span>
+                <span>
+                  <a href="">[chi tiết]</a>
+                </span>
+              </div>
+            </div>
+            <div class="cinema">
+              <img class="cinema-image" src="../../../assets/img/galaxy-nguyen-du.jpg" alt="cinema">
+              <div class="wrapInfo">
+                <span>GLX-Nguyễn Du</span>
+                <span class="infoMovieCinema">116 Nguyễn Du, Q.1</span>
+                <span>
+                  <a href="">[chi tiết]</a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <!--End cột 2-->
+
+          <!--cột 3-->
+          <div class="cinema-schedule">
+            <div class="wrap-movie">
+              <div class="movieInfo" *ngFor="let movie of danhSachPhim">
+                <img [src]="movie.HinhAnh" class="cinema-image" alt="hinhanh">
+                <div class="wrapInfo">
+                  <p>
+                    <span class="ageType badge badge-danger">C16</span>
+                    <span class="movieTitle">{{movie.TenPhim}}</span>
+                  </p>
+                  <p class="amountTime">135 phút - IMDb 8.2</p>
+                </div>
+                <div class="listTypeTime">
+                  <img src="../../../assets/img/2_0.png">
+                  <div class="sessions">
+                    <a href="">9:00</a>
+                    <a href="">10:00</a>
+                    <a href="">11:00</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--End cột 3-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,126 @@
+<div class="bg-dangky">
+  <div class="container-dangky">
+    <div class="wrap-dangky">
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <h1 class="display-4 text-center">ĐĂNG KÝ</h1>
+          <div class="new-user text-center p-2">
+            Bạn đã có tài khoản?
+            <a class="signup-link" href="/dangnhap">Đăng Nhập Nha</a>
+          </div>
+          <form #formDK="ngForm" (ngSubmit)="dangKy(formDK)">
+            <!--Tai Khoan-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput required #taiKhoan="ngModel" minlength="6" maxlength="20" name="TaiKhoan" ngModel placeholder="Tài Khoản" type="text"/>
+              </mat-form-field>
+              <div *ngIf="taiKhoan.errors && (taiKhoan.touched || taiKhoan.dirty)">
+                <div class="alert alert-danger" *ngIf="taiKhoan.errors.required">
+                  * Vui lòng nhập tài khoản
+                </div>
+                <div class="alert alert-danger" *ngIf="taiKhoan.errors.minlength">
+                  * Tài khoản phải có ít nhất 6 kí tự
+                </div>
+              </div>
+            </div>
+
+            <!--Mat khau-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput required #matKhau= "ngModel" name="MatKhau" ngModel placeholder="Mật Khẩu" type="password" [pattern]='"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"' passwordToggle />
+              </mat-form-field>
+              <div *ngIf="matKhau.errors && (matKhau.touched || matKhau.dirty)">
+                <div class="alert alert-danger" *ngIf="matKhau.errors.required">
+                  * Vui lòng nhập mật khẩu
+                </div>
+                <div class="alert alert-danger" *ngIf="matKhau.errors.pattern">
+                  * Mật khẩu phải có ít nhất 8 chữ, ít nhất 1 chữ viết hoa , 1 chữ viết thường và 1 số
+                </div>
+              </div>
+            </div>
+
+            <!--Ho ten-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput required #hoTen="ngModel" name="HoTen" ngModel placeholder="Họ Tên" type="text" [pattern]='"^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+                        "ẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$"' />
+              </mat-form-field>
+              <div *ngIf="hoTen.errors && (hoTen.touched || hoTen.dirty)">
+                <div class="alert alert-danger" *ngIf="hoTen.errors.required">
+                  * Vui lòng nhập tên
+                </div>
+                <div class="alert alert-danger" *ngIf="hoTen.errors.pattern">
+                  *Họ Tên phải là chữ
+                </div>
+              </div>
+            </div>
+
+            <!--Email-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput #email="ngModel" required name="Email" ngModel placeholder="Email" type="email"/>
+              </mat-form-field>
+              <div *ngIf="email.errors && (email.touched || email.dirty)">
+                <div class="alert alert-danger" *ngIf="email.errors.required">
+                  * Vui lòng nhập email
+                </div>
+              </div>
+            </div>
+
+            <!--So dien thoai-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput ngModel #soDT="ngModel" required name="SoDT" placeholder="Số Điện Thoại" type="text" [pattern]='"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"'/>
+              </mat-form-field>
+              <div *ngIf="soDT.errors && (soDT.touched || soDT.dirty)">
+                  <div class="alert alert-danger" *ngIf="soDT.errors.required">
+                    * Vui lòng nhập số điện thoại
+                  </div>
+                  <div class="alert alert-danger" *ngIf="soDT.errors.pattern">
+                    * Vui lòng chỉ nhập số
+                  </div>
+                </div>
+            </div>
+
+            <!--ma nhom-->
+            <div class="form-group">
+              <mat-form-field class="example-full-width w-100">
+                <input matInput ngModel #maNhom="ngModel" required name="MaNhom" placeholder="Mã Nhóm" type="text"/>
+              </mat-form-field>
+              <div *ngIf="maNhom.errors && (maNhom.touched || maNhom.dirty)">
+                  <div class="alert alert-danger" *ngIf="maNhom.errors.required">
+                    * Vui lòng nhập mã nhóm
+                  </div>
+                </div>
+            </div>
+
+            <!--Loai nguoi dung-->
+            <div class="form-group">
+              <mat-form-field class="w-100">
+                <mat-select matInput ngModel #maLoaiND="ngModel" required name="MaLoaiNguoiDung" placeholder="Loại Người Dùng">
+                  <mat-option value="KhachHang">Khách Hàng</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div *ngIf="maLoaiND.errors && (maLoaiND.touched || maLoaiND.dirty)">
+                  <div class="alert alert-danger" *ngIf="maLoaiND.errors.required">
+                    * Vui lòng chọn loại người dùng
+                  </div>
+                </div>
+            </div>
+
+            <!--button submit-->
+            <div class="form-group text-center">
+              <button [disabled]="formDK.invalid" type="submit" class="btn">Đăng Ký</button>
+            
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<button (click)="hideSidebar()" class="btn btn-success">Hide Sidebar</button>
+<button (click)="showSidebar()" class="btn btn-info">Show Sidebar</button>
+<h1 *ngIf="statusDK">Đăng Ký Component</h1> -->

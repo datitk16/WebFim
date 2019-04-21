@@ -1,0 +1,69 @@
+h2{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top: 30px;
+    margin-top: 108px;
+}
+
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.thumbnail{
+    margin-bottom: 45px;
+}
+.thumbnail>img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.caption-mod-1{
+    margin-top: 20px;
+}
+.blog-post-time {
+    color: #b7b7b7;
+    font-size: 14px;
+}
+.blog-post-title {
+    padding-bottom: 10px;
+}
+.text-success-custom a {
+    color: #151515;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.text-success-custom a:hover {
+    color: rgb(254, 132, 49);
+    transition: .3s all ease;
+}
+.blog-post-body {
+    margin-top: 10px;
+}
+.text-gray{
+    font-size: 14px;
+    color: #b7b7b7;
+    text-decoration: none;
+}
+.text-gray:hover{
+    color: rgb(254, 132, 49);
+    transition: .3s all ease;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: rgb(254, 132, 49);
+    border-color: rgb(254, 132, 49);
+}
+.page-link{
+    color: rgb(254, 132, 49);
+}

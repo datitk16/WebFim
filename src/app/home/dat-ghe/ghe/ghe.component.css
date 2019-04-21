@@ -1,0 +1,9 @@
+button{
+    padding: 0;
+    width: 40px; 
+    height: 40px;
+}
+.btn-ghedangdat{
+    background-color: rgb(254, 132, 49);
+    color:white;
+}

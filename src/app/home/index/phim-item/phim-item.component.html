@@ -1,0 +1,51 @@
+<!-- <div class="card mb-4">
+  <span class="point">
+    <p class="setStars text-center" >
+        {{phimItem.DanhGia}}
+        <i class="fa fa-star movie__star"></i>
+    </p>
+  </span>
+  <img [src]="phimItem.HinhAnh" style="height:350px" />
+  <div class="card-body">
+    <h6 class="card-title">{{phimItem.TenPhim}}</h6>
+    <p class="card-title">Ngày Khởi Chiếu: {{phimItem.NgayKhoiChieu | date: 'dd-MM-yyyy'}}</p>
+  
+  <button class="btn btn-success" [routerLink]="['/chitiet', phimItem.MaPhim]">Xem Chi Tiết</button> 
+   <button class="btn" [queryParams]="{maphim: phimItem.MaPhim, manhom:phimItem.MaNhom}" routerLink="/chitiet">Xem Chi Tiết</button>
+  </div>
+</div> -->
+
+<div class="movie_box_wrapper">
+  <div class="movie_img_box">
+    <span class="point">
+      <p class="setStars text-center">
+        {{phimItem.DanhGia}}
+        <i class="fa fa-star movie__star"></i>
+      </p>
+    </span>
+    <img [src]="phimItem.HinhAnh" class="movie_img">
+    <div class="overlay">
+      <div class="button">
+        <img src="../../../../assets/img/button_play_img.png" [queryParams]="{maphim: phimItem.MaPhim, manhom:phimItem.MaNhom}" routerLink="/chitiet">
+      </div>
+    </div>
+
+  </div>
+  <div class="movie_content_box">
+    <div class="movie_content_box_inner">
+      <h5 class="phim_title">
+        <a [queryParams]="{maphim: phimItem.MaPhim, manhom:phimItem.MaNhom}" routerLink="/chitiet">{{phimItem.TenPhim |
+          uppercase}}</a>
+      </h5>
+      <div class="phim_info">
+        <span class="info_bold">Thể loại: </span>
+        <span class="info_normal">Hài, Tình cảm</span>
+      </div>
+      <div class="phim_info">
+        <span class="info_bold">Khởi Chiếu: </span>
+        <span class="info_normal">{{phimItem.NgayKhoiChieu | date: 'dd-MM-yyyy'}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

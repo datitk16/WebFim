@@ -1,0 +1,12 @@
+.carousel{
+    padding-top:69px;
+}
+.control-prev-icon img{
+    width: 35px;
+}
+.control-next-icon img{
+    width: 35px;
+}
+.carousel-indicators li {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,49 @@
+.heading{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top: 108px;
+}
+
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+}
+.tong-tien{
+    color:rgb(254, 132, 49);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.man-hinh{
+    background-color: #282828;
+    color:white;
+    margin-bottom: 50px;
+}
+.btn-huydat{
+    background-color:  #282828;
+    border: 2px solid  #282828;
+    color: #fff;
+    text-transform: uppercase;
+   
+}
+.btn-huydat:hover{
+    color:  #282828;
+    background-color: transparent;
+    border: 2px solid  #282828;
+    transition: .4s;
+}
+.contact{
+    font-size: 14px;
+    font-weight: 400;
+    color:#282828;
+    text-align: center;
+}
+.contact .note {
+    opacity: 0.5;
+}
+

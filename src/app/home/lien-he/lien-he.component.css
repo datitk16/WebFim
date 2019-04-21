@@ -1,0 +1,91 @@
+h2{
+    font-size: 46px;
+    line-height: 1.13043;
+    text-align: center;
+    margin-top: 30px;
+    margin-top: 108px;
+}
+
+hr {
+    width: 100px;
+    height:1px;
+    border: 0;
+    background-image: linear-gradient(to right, #7f43f5 0%, #709dff 50%, #fa72e4 100%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.elementor-element{
+    margin-bottom: 150px;
+}
+.image{
+    background-image: url('../../../assets/img/contact-us.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+    position: relative;
+}
+
+.contact-block{
+    width: 90%;
+    background-color: #ffffff;
+    top: -150px;
+    padding: 60px 35px 60px 35px;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-block p{
+    margin-bottom: 0;
+}
+.contact-icon{
+    display: inline-block;
+    height: 93px;
+    width: 93px;
+    line-height: 93px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+.contact-icon img{
+    width: 45%;
+    margin-top: -7px;
+}
+.container-dangnhap{
+    width: 100%;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 70px;
+    
+}
+.wrap-dangnhap{
+    width: 680px;
+    padding: 0 0 50px 0;
+}
+.form-title{
+    margin-bottom: 30px;
+}
+.btn{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+    color:  rgb(254, 132, 49);
+    background-color: transparent;
+    border: 2px solid  rgb(254, 132, 49);
+    transition: .4s;
+}
+.btn:hover {
+    background-color:  rgb(254, 132, 49);
+    border-color:  rgb(254, 132, 49);
+    color: #fff;
+}
+
+.map iframe{
+    width: 100%;
+}

@@ -1,0 +1,95 @@
+<div class="content-dashboard">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Thống kê người dùng</h4>
+            <p class="category">21/12/2018 00:00:00</p>
+          </div>
+          <div class="content">
+            <mat-card-content class="dashboard-card-content">
+              <lib-Ng6O2Chart [chartType]="pieTypeName" [configData]="configData" [graphData]="pieDataJson" [svgWidth]="'450'"
+                [svgHeight]="'250'"></lib-Ng6O2Chart>
+            </mat-card-content>
+
+            <div class="footer">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-check"></i> Thống kê đã gửi 10 ngày trước
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Thống kê phim</h4>
+            <p class="category">21/12/2018 00:00:00</p>
+          </div>
+          <div class="content">
+            <mat-card-content class="dashboard-card-content">
+              <lib-Ng6O2Chart [chartType]="stackBarTypeName" [configData]="configData" [graphData]="stackBarDataJson"
+                [svgWidth]="'450'" [svgHeight]="'250'"></lib-Ng6O2Chart>
+            </mat-card-content>
+            <div class="footer">
+              <hr>
+              <div class="stats">
+                  <i class="fa fa-check"></i> Thống kê đã gửi 10 ngày trước
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card ">
+          <div class="header">
+            <h4 class="title">Thống kê doanh thu</h4>
+            <p class="category">21/12/2018 00:00:00</p>
+          </div>
+          <div class="content">
+            <mat-card-content class="dashboard-card-content">
+              <lib-Ng6O2Chart [chartType]="barTypeName" [configData]="configData" [graphData]="barDataJson" [svgWidth]="'450'"
+                [svgHeight]="'250'"></lib-Ng6O2Chart>
+            </mat-card-content>
+
+            <div class="footer">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-check"></i> Thống kê đã gửi 10 ngày trước
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Lịch sử đặt vé</h4>
+            <p class="category">21/12/2018 00:00:00</p>
+          </div>
+          <div class="content">
+            <mat-card-content class="dashboard-card-content">
+              <lib-Ng6O2Chart [chartType]="histogramTypeName" [configData]="configData" [graphData]="histogramDataJson"
+                [svgWidth]="'450'" [svgHeight]="'250'"></lib-Ng6O2Chart>
+            </mat-card-content>
+
+            <div class="footer">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-check"></i> Thống kê đã gửi 10 ngày trước
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

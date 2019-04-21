@@ -1,0 +1,76 @@
+<section class="section-content pv12">
+    <div class="container">
+        <div class="wrap-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4 col-sm-12 post-image">
+                        <div class="movie-poster">
+                            <img [src]="phim.HinhAnh">
+                        </div>
+                        <div class="button-play">
+                            <a [href]="phim.Trailer | safe" class="video-player">
+                                <img src="../../../assets/img/button_play_img.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-xs-12 ph0">
+                        <div class="post-content">
+                            <div class="content-meta">
+                                <h2 class="entry-title">{{phim.TenPhim}}</h2>
+                                <hr>
+                            </div>
+                            <p class="entry-text">{{phim.MoTa}}</p>
+                            <div class="info-content">
+                                <ul class="item-info">
+                                    <li><span>Thời lượng: 95 phút </span></li>
+                                    <li><span>Thể loại: Hài, hành động - 2D/Digital</span></li>
+                                    <li><span>Đạo diễn: Timothy Miller</span></li>
+                                    <li><span>Diễn viên: Monica Baccarin , Ryan Ray</span></li>
+                                    <li><span>Ngày khởi chiếu: {{phim.NgayKhoiChieu | date: 'dd-MM-yyyy'}}</span></li>
+                                </ul>
+
+                                <div class="c100 p50 dark big orange">
+                                    <span>7.9</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                    <p class="scoreIMD">Điểm IMDb</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="content-meta">
+                        <h2 class="entry-title datve-title">Đặt vé</h2>
+                        <hr>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ngày Chiếu</th>
+                                <th>Giờ Chiếu</th>
+                                <th>Thời Lượng</th>
+                                <th>Hành Động</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let suatchieu of phim.LichChieu">
+                                <td>{{suatchieu.NgayChieuGioChieu | date: 'dd-MM-yyyy'}}</td>
+                                <td>{{suatchieu.NgayChieuGioChieu | date: 'hh:mm'}}</td>
+                                <td>{{suatchieu.ThoiLuong}}</td>
+                                <td>
+                                    <button class="btn btn-datve" [routerLink]="['/datghe',suatchieu.MaLichChieu]">Đặtvé</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
